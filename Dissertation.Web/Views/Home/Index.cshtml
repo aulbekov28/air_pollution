@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Dissertation.Web.Controllers.PredictionViewModel>
+
+<div class="jumbotron">
+    <h2>Прогноз концентрации загрязняющих веществ в атмосферном воздухе г. Усть-Каменогорск</h2>
+    <div>
+        <p class="lead">
+            <div class="accordion" id="accordionExample">
+                
+                @foreach (var i in Model.Select(x => new {x.Point,x.PoinID}).Distinct().ToList())
+                {
+                    
+                    <div class="card">
+                        <div class="card-header" id="heading_@i.PoinID">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_@i.PoinID" aria-expanded="true" aria-controls="collapse_@i.PoinID">
+                                    @i.Point
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapse_@i.PoinID" class="collapse" aria-labelledby="heading_@i.PoinID" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Вещество</th>
+                                        <th scope="col">Время прогноза</th>
+                                        <th scope="col">Значение</th>
+                                        <th scope="col">ПДКмр</th>
+                                        <th scope="col">Значение/ПДК</th>
+                                    </tr>
+                                    </thead>
+                                    @foreach (var j in Model.Where(x => x.PoinID == @i.PoinID))
+                                    {
+                                        <tr class="@(@j.Rate > 0.95 ? "table-danger" : "table-default")">
+                                            <td scope="row"> @j.Substance </td>
+                                            <td> @j.Time.Add(@j.Range).ToString("dd.MM.yyyy HH:mm") </td>
+                                            <td> @j.Predicted.ToString("F4") </td>
+                                            <td> @j.PDK </td>
+                                            <td> @j.Rate.ToString("F2") </td>
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </p>
+        
+
+    </div>
+      <p><a href="https://asp.net" class="btn btn-primary btn-lg">Подробнее &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Абстракт</h2>
+        <p>
+            Одной из самых основных проблем современности является загрязнение атмосферного воздуха, то есть привнесение в воздух или образования в нем физических агентов, химических веществ или организмов, неблагоприятно воздействующих на среду жизни. Это является одним из основных факторов антропогенного воздействия на окружающую среду. Особенно в крупных и промышленных городах, где наблюдается повышенная концентрация загрязняющих веществ, необходимо быстро принимать решения в случаях повышения концентрации веществ.
+        </p>
+        <p>
+            Решение задач анализа данных, таких как составление прогноза, анализ за определенные временные промежутки, даст возможность оценить уровень воздействия на окружающую среду. Применение такого подхода поможет заблаговременно выявить неблагоприятные метеорологические условия и позволит определить необходимые мероприятия для оперативного реагирования. Для выполнения контроля мониторинга состояния воздушной среды можно применить различные методы анализа загрязнений.
+        </p>
+        <p>
+            Целью данной работы является обзор методов для процесса анализа выбросов, учитывающего различные допущения и характер распространения веществ в окружающей среде.
+        </p>
+    </div>
+</div>

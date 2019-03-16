@@ -1,0 +1,61 @@
+﻿@model Dissertation.Web.Controllers.PredictionListViewModel
+
+<style>
+    .table-wrapper-scroll-y {
+        display: block;
+        max-height: 350px;
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+</style>
+
+<div class="jumbotron">
+    <h2>Прогноз концентрации загрязняющих веществ в атмосферном воздухе г. Усть-Каменогорск</h2>
+    <div class="table-wrapper-scroll-y">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Адрес</th>
+                        <th scope="col">Вещество</th>
+                        <th scope="col">Время прогноза</th>
+                        <th scope="col">Значение</th>
+                        <th scope="col">ПДКмр</th>
+                        <th scope="col">Значение/ПДК</th>
+                    </tr>
+                </thead>
+                @foreach (var j in Model.Predictions)
+                {
+                    <tr class="@(@j.Rate > 0.95 ? "table-danger" : "table-default")">
+                        <td scope="row"> @j.Point </td>
+                        <td> @j.Substance </td>
+                        <td> @j.Time.Add(@j.Range).ToString("dd.MM.yyyy HH:mm") </td>
+                        <td> @j.Predicted.ToString("F4") </td>
+                        <td> @j.PDK </td>
+                        <td> @j.Rate.ToString("F2") </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    <h2>Суммарное воздействие веществ</h2>
+    <div class="table-wrapper-scroll-y">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Адрес</th>
+                        <th scope="col">Вещество</th>
+                        <th scope="col">Время прогноза</th>
+                        <th scope="col">Коэффициент сумм. возейдствия</th>
+                    </tr>
+                </thead>
+                @foreach (var j in Model.SummaryImpacts)
+                {
+                    <tr>
+                        <td scope="row"> @j.Point </td>
+                        <td> @j.Susbtances </td>
+                        <td> @j.Time.Add(@j.Range).ToString("dd.MM.yyyy HH:mm") </td>
+                        <td> @j.ImpactCoeff.ToString("F4") </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>

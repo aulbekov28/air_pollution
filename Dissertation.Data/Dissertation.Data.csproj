@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9D52127-C255-454F-B800-D0994EFA1CF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dissertation.Data</RootNamespace>
+    <AssemblyName>Dissertation.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\ADDD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ALG.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\BD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\BOUNDS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\COND.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CP.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CRIT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_MS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CL2_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CL2_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CL2_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CL2_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CL2_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CL2_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CO_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CO_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CO_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CO_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CO_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CO_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CXHY_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CXHY_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CXHY_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CXHY_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CXHY_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_CXHY_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCL_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCL_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCL_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCL_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCL_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCL_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCOH_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCOH_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCOH_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCOH_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCOH_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HCOH_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HF_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HF_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HF_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HF_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HF_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_HF_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_NO2_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_NO2_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_NO2_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_NO2_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_NO2_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_NO2_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_SO2_D.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_SO2_DD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_SO2_M.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_SO2_MM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_SO2_Y.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\C_SENSIS_SO2_YY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\DataAnalysisContext.cs" />
+    <Compile Include="Context\DataMonitoring.Context.cs">
+      <DependentUpon>DataMonitoring.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Context\DataMonitoring.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Context\DataMonitoring.Designer.cs">
+      <DependentUpon>DataMonitoring.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Context\DC.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\DEV.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\DIM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\FORMAT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\FPS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\GROUP_CP.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\IT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\MI.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\MSG.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\MSSQLContext.cs" />
+    <Compile Include="Context\NC.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\OPERS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\OTT_SET.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PAR.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\REGIM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\RepDev.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\sysdiagrams.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TLevelSql.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TRepColumns.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TRepList.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TYPE.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TypeDevice.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_ALARM.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_EPC.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_GPS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_GT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_MGT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_MS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_OTT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY_CL2.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY_CO.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY_HCL.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY_HF.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY_NH3.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY_NO2.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_POLY_SO2.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_REGARD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_REGARD_CL2.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_CL2.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_CO.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_CXHY.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_HCL.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_HCOH.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_HF.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_NH3.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_NO.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_NO2.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SENSIS_SO2.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_SSD.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_STAT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_UTP.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_WXT.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\WS.cs">
+      <DependentUpon>DataMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\BaseEntity.cs" />
+    <Compile Include="DataModel\Measurment.cs" />
+    <Compile Include="DataModel\Post.cs" />
+    <Compile Include="DataModel\Prediction.cs" />
+    <Compile Include="DataModel\Substance.cs" />
+    <Compile Include="DataModel\Weather.cs" />
+    <Compile Include="IDataAnalysisContext.cs" />
+    <Compile Include="Migrations\201809221217436_AddMeasurmentLinks.cs" />
+    <Compile Include="Migrations\201809221217436_AddMeasurmentLinks.Designer.cs">
+      <DependentUpon>201809221217436_AddMeasurmentLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811301423205_AddPredictions.cs" />
+    <Compile Include="Migrations\201811301423205_AddPredictions.Designer.cs">
+      <DependentUpon>201811301423205_AddPredictions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812091411230_wtf.cs" />
+    <Compile Include="Migrations\201812091411230_wtf.Designer.cs">
+      <DependentUpon>201812091411230_wtf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MSSQLDirectory\201903161750207_Initial.cs" />
+    <Compile Include="MSSQLDirectory\201903161750207_Initial.Designer.cs">
+      <DependentUpon>201903161750207_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSSQLDirectory\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Context\DataMonitoring.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataMonitoring.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Context\DataMonitoring.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataMonitoring.edmx</DependentUpon>
+      <LastGenOutput>DataMonitoring.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Context\DataMonitoring.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataMonitoring.edmx</DependentUpon>
+      <LastGenOutput>DataMonitoring.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Context\DataMonitoring.edmx.diagram">
+      <DependentUpon>DataMonitoring.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809221217436_AddMeasurmentLinks.resx">
+      <DependentUpon>201809221217436_AddMeasurmentLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811301423205_AddPredictions.resx">
+      <DependentUpon>201811301423205_AddPredictions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812091411230_wtf.resx">
+      <DependentUpon>201812091411230_wtf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSSQLDirectory\201903161750207_Initial.resx">
+      <DependentUpon>201903161750207_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
