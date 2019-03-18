@@ -437,6 +437,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DataMonitoring.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="connections.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Context\DataMonitoring.edmx.diagram">
       <DependentUpon>DataMonitoring.edmx</DependentUpon>
     </None>
