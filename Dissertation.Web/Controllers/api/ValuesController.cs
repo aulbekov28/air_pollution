@@ -112,10 +112,10 @@ namespace Dissertation.Web.Controllers
 
         public async Task<IHttpActionResult> GetForVisualization()
         {
-
+            throw new NotImplementedException();
             try
             {
-
+                //var _data = await 
             }
             finally
             {
@@ -124,13 +124,13 @@ namespace Dissertation.Web.Controllers
 
             return BadRequest();
         }
-        
 
-        //[HttpPost]
-        //public void Predictions(Object o)
-        //{
-        //    //string postData = new System.IO.StreamReader(context.Request.InputStream).ReadToEnd();
-        //    throw new NotImplementedException();
-        //}
+
+        [HttpPost]
+        public void Predictions(Object o)
+        {
+            //string postData = new System.IO.StreamReader(context.Request.InputStream).ReadToEnd();
+            throw new NotImplementedException();
+        }
     }
 }

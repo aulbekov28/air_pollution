@@ -21,11 +21,6 @@ namespace Dissertation.Service.IntegrationService.Classes
             _dataAnalysisContext = dataAnalysisContext;
         }
 
-        public void WritePredictions(IEnumerable<Prediction> predicitons)
-        {
-            throw new NotImplementedException();
-        }
-
         public void AllWeatherDataCheker(DateTime time)
         {
             var start = time;

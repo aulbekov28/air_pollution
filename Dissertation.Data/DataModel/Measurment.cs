@@ -18,7 +18,7 @@ namespace Dissertation.Data.Context
         public DateTime? TimeC { get; set; }
         public double? Value { get; set; }
         public double? NextValue { get; set; }
-        //=[ForeignKey("NextMeasurment")]
+        //[ForeignKey("NextMeasurment")]
         public long? NextValueID { get; set; }
         //public virtual Measurment NextMeasurment { get; set; }
         //[ForeignKey("Weather")]

@@ -23,7 +23,6 @@ namespace Dissertation.Service.IntegrationService.Classes
             Active = true;
 
 #if DEBUG
-            //FindNextValue(null, null);
             MainCycle(null, null);
 #endif
             timer = new System.Timers.Timer
@@ -43,17 +42,47 @@ namespace Dissertation.Service.IntegrationService.Classes
             _log.Trace("Stop cycle");
         }
 
-        private void RunTryCatch(Action methodAction)
+       
+        private void MainCycle(object sender, System.Timers.ElapsedEventArgs e)
         {
-            try
+            lock(mainLock)
             {
-                methodAction.Invoke();
+                if (Active)
+                {
+                    _log.Trace("MainCycle run");
+                    using (var a = new DB_SAPEntities())
+                    {
+                        using (var b = new DataAnalysisContext())
+                        {
+
+                            Executor _do = new Executor(a, b);
+                            RunTryCatch(_do.UpdateSubtances);
+                            RunTryCatch(_do.UpdatePosts);
+                            RunTryCatch(_do.UpdateWeather);
+                            RunTryCatch(_do.UpdateMeasurments);
+
+                            try
+                            {
+                                b.SaveChanges();
+                                b.Database.ExecuteSqlCommand("call map_measurment_weather()");
+                            }
+                            catch (Exception exception)
+                            {
+                                _log.Error(exception);
+                                throw;
+                            }
+                        }
+                    }
+                    var prediction = RunTryCatch(Prediction.ExecturePythonScript);
+                }
             }
-            catch (Exception e)
-            {
-                _log.Error(e);
-                throw;
-            }
+        }
+
+
+        //WTF is that
+        private void RunTryCatch(object v)
+        {
+            throw new NotImplementedException();
         }
 
         private void RunTryCatch(Action<string> methodAction, string data)
@@ -81,52 +110,20 @@ namespace Dissertation.Service.IntegrationService.Classes
             }
             return default(T);
         }
-        
-        private void MainCycle(object sender, System.Timers.ElapsedEventArgs e)
+
+        private void RunTryCatch(Action methodAction)
         {
-            lock(mainLock)
+            try
             {
-                if (Active)
-                {
-                    _log.Trace("MainCycle run");
-                    using (var a = new DB_SAPEntities())
-                    {
-                        using (var b = new DataAnalysisContext())
-                        {
-
-                            Executor _do = new Executor(a, b);
-
-                            RunTryCatch(_do.UpdateSubtances);
-                            RunTryCatch(_do.UpdatePosts);
-                            RunTryCatch(_do.UpdateWeather);
-                            //RunTryCatch(_do.UpdateMeasurments);
-                            RunTryCatch(_do.UpdateMeasurments);
-
-                            try
-                            {
-                                b.SaveChanges();
-                                b.Database.ExecuteSqlCommand("call map_measurment_weather()");
-                            }
-                            catch (Exception exception)
-                            {
-                                _log.Error(exception);
-                                throw;
-                            }
-                            //if (!String.IsNullOrEmpty(prediction))
-                            //{
-                            //    RunTryCatch(_do.WritePrediction,prediction);
-                            //}
-                        }
-                    }
-                    var prediction = RunTryCatch(Prediction.ExecturePythonScript);
-                }
+                methodAction.Invoke();
+            }
+            catch (Exception e)
+            {
+                _log.Error(e);
+                throw;
             }
         }
 
-        private void RunTryCatch(object v)
-        {
-            throw new NotImplementedException();
-        }
 
         private void WeatherMeasurmentMapper(object sender, System.Timers.ElapsedEventArgs e)
         {

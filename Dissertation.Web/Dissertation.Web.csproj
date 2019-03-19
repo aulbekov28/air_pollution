@@ -226,8 +226,8 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\Air\air - source.js" />
     <Content Include="Scripts\Air\air.js" />
+    <Content Include="Scripts\Air\air_v1.js" />
     <Content Include="Scripts\Air\d3.v3.js" />
     <Content Include="Scripts\Air\mvi.js" />
     <Content Include="Scripts\Air\topojson.v1.js" />
