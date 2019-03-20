@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dissertation.Notification.Services
 {
-    interface INotification
+    public interface INotifier
     {
-        void Notify(string subject, string message);
+        void Notify(string message, string subject);
+        void Notify(string message);
     }
 }

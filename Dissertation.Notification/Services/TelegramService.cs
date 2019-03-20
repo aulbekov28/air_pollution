@@ -6,7 +6,7 @@ using Telegram.Bot;
 
 namespace Dissertation.Notification.Services
 {
-    class TelegramService : INotification
+    public class TelegramService 
     {
         private TelegramBotClient _client;
 

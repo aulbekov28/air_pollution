@@ -8,18 +8,23 @@ using Telegram.Bot.Types;
 
 namespace Dissertation.Notification
 {
-    public class Notification
+    public class Notifier : INotifier
     {
         private TelegramService service;
 
-        public Notification()
+        public Notifier()
         {
             service = new TelegramService();
         }
         
-        public void SendTelegramChannel(string message)
+        public void Notify( string message, string subject = "Prediction")
         {
-            service.Notify("prediction",message);
+            service.Notify("prediction", message);
+        }
+
+        public void Notify(string message)
+        {
+            this.Notify(message, string.Empty);
         }
     }
 }

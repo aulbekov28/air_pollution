@@ -9,7 +9,7 @@ using Dissertation.Data.Context;
 
 namespace Dissertation.Service.IntegrationService.Services
 {
-    internal class BaseUpdater
+    internal abstract class BaseUpdater
     {
         protected IDataAnalysisContext _analysisContext;
         protected DB_SAPEntities _monitoringContext;

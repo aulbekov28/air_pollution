@@ -2,10 +2,11 @@
 using Dissertation.Data.Context;
 using System;
 using System.Linq;
+using Dissertation.Notification.Services;
 
 namespace Dissertation.Service.IntegrationService.Classes
 {
-    class Integration
+    class Integration : IIntegration
     {
         private bool Active = false;
 
@@ -18,8 +19,8 @@ namespace Dissertation.Service.IntegrationService.Classes
         public void StartCycle()
         {
             _log.Trace("Start cycle");
-            Dissertation.Notification.Notification _notification = new Notification.Notification();
-            _notification.SendTelegramChannel("Service started");
+            INotifier _notifier = Factory.GetNotifier();
+            _notifier.Notify("Service started");
             Active = true;
 
 #if DEBUG
@@ -42,8 +43,8 @@ namespace Dissertation.Service.IntegrationService.Classes
             _log.Trace("Stop cycle");
         }
 
-       
-        private void MainCycle(object sender, System.Timers.ElapsedEventArgs e)
+
+        public void MainCycle(object sender, System.Timers.ElapsedEventArgs e)
         {
             lock(mainLock)
             {
@@ -73,7 +74,9 @@ namespace Dissertation.Service.IntegrationService.Classes
                             }
                         }
                     }
-                    var prediction = RunTryCatch(Prediction.ExecturePythonScript);
+
+                    var predcitor = Factory.GetPredictor();
+                    predcitor.Make();
                 }
             }
         }

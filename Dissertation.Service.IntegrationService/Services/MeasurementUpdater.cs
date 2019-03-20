@@ -185,5 +185,34 @@ namespace Dissertation.Service.IntegrationService.Services
                 _analysisContext.ChangeTracker.DetectChanges();
             }
         }
+
+        private IQueryable<T> GetValues<T, E>(int SubID) where T : class
+        {
+            var subDbSet = _monitoringContext.Set<T>();
+            var max = _analysisContext.Measurment.Where(x => x.SubstanceID == SubID).DefaultIfEmpty().Max(r => r == null ? 0 : r.SensisID);
+
+            var CL2Entities = (from x in _monitoringContext.V_SENSIS_CL2
+                join z in _monitoringContext.V_MS on x.MSid equals z.MSid
+                where z.MSid > max
+                select new Measurment
+                {
+                    //Value = x.P0037,
+                    SensisID = z.MSid,
+                    Time = z.MTime,
+                    TimeC = z.CTime,
+                    PostID = z.CPid,
+                    SubstanceID = SubID
+                }).OrderBy(v => v.SensisID).Take(5000);
+
+            var Entities = (from x in subDbSet
+
+                            select new Measurment
+                {
+
+                });
+
+            throw new NotImplementedException();
+        }
+
     }
 }

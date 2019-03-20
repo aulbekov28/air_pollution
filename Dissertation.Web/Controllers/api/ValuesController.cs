@@ -45,7 +45,7 @@ namespace Dissertation.Web.Controllers
             JObject obj = JObject.Parse(data);
             List<Prediction> predictions = new List<Prediction>();
             StringBuilder message = new StringBuilder();
-            var notify = new Notification.Notification();
+            var notify = new Notification.Notifier();
 
             _log.Trace($"API CALL / Records received {obj.Count}");
             try
