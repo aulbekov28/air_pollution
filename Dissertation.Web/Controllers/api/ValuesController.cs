@@ -11,12 +11,21 @@ using Dissertation.Data.Context;
 using Dissertation.Web.Classes;
 using Common.Logging;
 using Dissertation.Notification;
+using Microsoft.Ajax.Utilities;
+using System.Threading.Tasks;
 
 namespace Dissertation.Web.Controllers
 {
     public class ValuesController : ApiController
     {
         private ILog _log = LogManager.GetLogger(typeof(ValuesController));
+
+        private readonly IDataAnalysisContext _dataAnalysisContext;
+
+        public ValuesController()
+        {
+            _dataAnalysisContext = new DataAnalysisContext();
+        }
 
         // GET api/values
         public IEnumerable<string> Get()
@@ -36,7 +45,7 @@ namespace Dissertation.Web.Controllers
             JObject obj = JObject.Parse(data);
             List<Prediction> predictions = new List<Prediction>();
             StringBuilder message = new StringBuilder();
-            var notify = new Notification.Notification();
+            var notify = new Notification.Notifier();
 
             _log.Trace($"API CALL / Records received {obj.Count}");
             try
@@ -101,13 +110,27 @@ namespace Dissertation.Web.Controllers
         {
         }
 
-        
+        public async Task<IHttpActionResult> GetForVisualization()
+        {
+            throw new NotImplementedException();
+            try
+            {
+                //var _data = await 
+            }
+            finally
+            {
+                
+            }
 
-        //[HttpPost]
-        //public void Predictions(Object o)
-        //{
-        //    //string postData = new System.IO.StreamReader(context.Request.InputStream).ReadToEnd();
-        //    throw new NotImplementedException();
-        //}
+            return BadRequest();
+        }
+
+
+        [HttpPost]
+        public void Predictions(Object o)
+        {
+            //string postData = new System.IO.StreamReader(context.Request.InputStream).ReadToEnd();
+            throw new NotImplementedException();
+        }
     }
 }

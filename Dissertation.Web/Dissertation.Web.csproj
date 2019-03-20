@@ -212,7 +212,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PreditionController.cs" />
     <Compile Include="Controllers\api\ValuesController.cs" />
-    <Compile Include="Controllers\VisualizeController.cs" />
+    <Compile Include="Controllers\VisualizationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -220,11 +220,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\Air\styles.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Air\air.js" />
+    <Content Include="Scripts\Air\air_v1.js" />
+    <Content Include="Scripts\Air\d3.v3.js" />
+    <Content Include="Scripts\Air\mvi.js" />
+    <Content Include="Scripts\Air\topojson.v1.js" />
+    <Content Include="Scripts\Air\when.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -249,7 +256,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="connections.config" />
+    <Content Include="connections.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Air\mplus-2p-thin-056.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -275,13 +285,18 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Predition\List.cshtml" />
-    <Content Include="Views\Visualize\Index.cshtml" />
+    <Content Include="Views\Visualization\Index.cshtml" />
+    <Content Include="Views\Visualization\AirMap.cshtml" />
+    <Content Include="src\sample\13.json" />
+    <Content Include="src\tokyo-topo.json" />
+    <Content Include="src\sample\current.json" />
+    <Content Include="src\station-data.json" />
+    <Content Include="src\yk-topo.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -6,12 +6,12 @@ namespace Dissertation.Service.IntegrationService
 {
     public partial class IntegrationService : ServiceBase
     {
-        private Integration _service;
-        private ILog _log = LogManager.GetLogger(typeof(IntegrationService));
+        private IIntegration _service;
+        private ILog _log = Factory.GetLogger();
 
         public IntegrationService()
         {
-            _service = new Integration();
+            _service = Factory.GetIntegrationService();
             InitializeComponent();
         }
 

@@ -8,6 +8,7 @@ using  Dissertation.Data.Context;
 
 namespace Dissertation.Service.IntegrationService.Classes
 {
+    [Obsolete]
     public class Executor
     {
         readonly DB_SAPEntities _monitoringContext;
@@ -19,11 +20,6 @@ namespace Dissertation.Service.IntegrationService.Classes
         {
             _monitoringContext = monitoringContext;
             _dataAnalysisContext = dataAnalysisContext;
-        }
-
-        public void WritePredictions(IEnumerable<Prediction> predicitons)
-        {
-            throw new NotImplementedException();
         }
 
         public void AllWeatherDataCheker(DateTime time)
@@ -198,7 +194,7 @@ namespace Dissertation.Service.IntegrationService.Classes
                               orderby z.MSid ascending
                               select new Measurment
                               {
-                                  Value = x.P0025,
+                                  Value = x.Value,
                                   SensisID = z.MSid,
                                   Time = z.MTime,
                                   TimeC = z.CTime,

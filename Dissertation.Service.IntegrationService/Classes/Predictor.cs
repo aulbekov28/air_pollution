@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace Dissertation.Service.IntegrationService.Classes
 {
-    public class Prediction
+    public class Predictor : IPredictor
     {
-        public static string ExecturePythonScript()
+        public async void Make()
+        {
+            await Task.Run(() => ExecturePythonScript());
+        }
+
+        //TODO
+        public string ExecturePythonScript()
         {
             try
             {
@@ -18,7 +25,7 @@ namespace Dissertation.Service.IntegrationService.Classes
             }
         }
 
-        public static string Run_cmd(string cmd ="", string args="")
+        public string Run_cmd(string cmd ="", string args="")
         {
             ProcessStartInfo start = new ProcessStartInfo
             {
