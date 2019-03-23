@@ -14,7 +14,7 @@ namespace Dissertation.Service.IntegrationService.Classes
 
         private Object mainLock = new Object();
 
-        private ILog _log = LogManager.GetLogger(typeof(Integration));
+        private ILog _log = Factory.GetLogger();
 
         public void StartCycle()
         {
@@ -51,30 +51,11 @@ namespace Dissertation.Service.IntegrationService.Classes
                 if (Active)
                 {
                     _log.Trace("MainCycle run");
-                    using (var a = new DB_SAPEntities())
-                    {
-                        using (var b = new DataAnalysisContext())
-                        {
 
-                            Executor _do = new Executor(a, b);
-                            RunTryCatch(_do.UpdateSubtances);
-                            RunTryCatch(_do.UpdatePosts);
-                            RunTryCatch(_do.UpdateWeather);
-                            RunTryCatch(_do.UpdateMeasurments);
-
-                            try
-                            {
-                                b.SaveChanges();
-                                b.Database.ExecuteSqlCommand("call map_measurment_weather()");
-                            }
-                            catch (Exception exception)
-                            {
-                                _log.Error(exception);
-                                throw;
-                            }
-                        }
-                    }
-
+                    Services.Executor executor = new Services.Executor();
+                    executor.WorkExecuted += AfterWorker;
+                    executor.Start();
+                    
                     var predcitor = Factory.GetPredictor();
                     predcitor.Make();
                 }
@@ -82,107 +63,20 @@ namespace Dissertation.Service.IntegrationService.Classes
         }
 
 
-        //WTF is that
-        private void RunTryCatch(object v)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void RunTryCatch(Action<string> methodAction, string data)
+        private void AfterWorker()
         {
             try
             {
-                methodAction.Invoke(data);
+                var _analysis = Factory.GetDataAnalysisContext;
+                _analysis.Database.ExecuteSqlCommand("call map_measurment_weather()");
             }
-            catch (Exception e)
+            catch (Exception exception)
             {
-                _log.Error(e);
+                _log.Error(exception);
                 throw;
             }
+ 
         }
-
-        private T RunTryCatch<T>(Func<T> methodAction)
-        {
-            try
-            {
-                return methodAction.Invoke();
-            }
-            catch (Exception e)
-            {
-                _log.Error(e);
-            }
-            return default(T);
-        }
-
-        private void RunTryCatch(Action methodAction)
-        {
-            try
-            {
-                methodAction.Invoke();
-            }
-            catch (Exception e)
-            {
-                _log.Error(e);
-                throw;
-            }
-        }
-
-
-        private void WeatherMeasurmentMapper(object sender, System.Timers.ElapsedEventArgs e)
-        {
-            lock (mainLock)
-            {
-                if (Active)
-                {
-                    for (int i = 0; i < 100; i++)
-                    {
-                        Console.WriteLine($"Entered to {System.Reflection.MethodBase.GetCurrentMethod().Name}");
-                        using (var b = new DataAnalysisContext())
-                        {
-                            b.Database.CommandTimeout = 650;
-                            b.Database.ExecuteSqlCommand("call map_measurment_weather()");
-                        }
-                        Console.WriteLine("Exit");
-                    }
-                }
-            }
-        }
-
-        private void FindNextValue(object sender, System.Timers.ElapsedEventArgs e)
-        {
-            lock (mainLock)
-            {
-                if (Active)
-                {
-                    for (int i = 0; i < 100; i++)
-                    {
-                        Console.WriteLine($"Entered to {System.Reflection.MethodBase.GetCurrentMethod().Name}");
-                        using (var b = new DataAnalysisContext())
-                        {
-                            b.Database.CommandTimeout = 650;
-                            b.Database.ExecuteSqlCommand("call find_nextvalue()");
-                        }
-                        Console.WriteLine("Exit");
-                    }
-                }
-            }
-        }
-
-        private void DataUpdater(object sender, System.Timers.ElapsedEventArgs e)
-        {
-            Console.WriteLine("Entered to MainCycle");
-            DateTime time = new DateTime(2018,1,1);
-            using (var a = new DB_SAPEntities())
-            {
-                using (var b = new DataAnalysisContext())
-                {
-                    Executor _do = new Executor(a, b);
-                    _do.AllWeatherDataCheker(time);
-                    b.SaveChanges();
-                }
-            }
-            Console.WriteLine("Exit from MainCycle");
-        }
-        
+     
     }
 }

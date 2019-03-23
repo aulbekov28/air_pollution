@@ -13,8 +13,10 @@ namespace Dissertation.Data
     {
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         DbSet Set(Type entityType);
+        int SaveChanges();
         Task<int> SaveChangesAsync();
         DbChangeTracker ChangeTracker { get; }
+        Database Database { get; }
 
         DbSet<Weather> Weather { get; set; }
         DbSet<Measurment> Measurment { get; set; }

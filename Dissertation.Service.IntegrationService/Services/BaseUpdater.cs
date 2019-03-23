@@ -20,5 +20,10 @@ namespace Dissertation.Service.IntegrationService.Services
             this._analysisContext = _analysisContext;
             this._monitoringContext = _monitoringContext;
         }
+
+        protected override void Dispose()
+        {
+
+        }
     }
 }

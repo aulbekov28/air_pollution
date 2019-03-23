@@ -22,6 +22,7 @@ namespace Dissertation.Service.IntegrationService.Classes
             _dataAnalysisContext = dataAnalysisContext;
         }
 
+        [Obsolete]
         public void AllWeatherDataCheker(DateTime time)
         {
             var start = time;
@@ -52,7 +53,7 @@ namespace Dissertation.Service.IntegrationService.Classes
                 }
             }
         }
-
+        [Obsolete]
         public void UpdatePosts()
         {
             //TODO: Think about posts and substances updates
@@ -82,7 +83,7 @@ namespace Dissertation.Service.IntegrationService.Classes
             }
         }
 
-
+        [Obsolete]
         public void UpdateSubtances()
         {
             if (_dataAnalysisContext.Substance.FirstOrDefault() != null)
@@ -114,12 +115,12 @@ namespace Dissertation.Service.IntegrationService.Classes
                 }
             }
         }
-
+        [Obsolete]
         public void WritePrediction(string prediction)
         {
             throw new NotImplementedException();
         }
-
+        [Obsolete]
         public void UpdateWeather()
         {
             var lastid = _dataAnalysisContext.Weather.DefaultIfEmpty().Max(x => x == null ? 0 : x.ID);
@@ -146,7 +147,7 @@ namespace Dissertation.Service.IntegrationService.Classes
                 _dataAnalysisContext.ChangeTracker.DetectChanges();
             }
         }
-
+        [Obsolete]
         private IQueryable<T> GetValues<T, E>(int SubID) where T : class
         {
             //var prop = _monitoringContext.V_SENSIS_CL2.ElementType.GetProperty("")
@@ -160,7 +161,7 @@ namespace Dissertation.Service.IntegrationService.Classes
 
             throw new NotImplementedException();
         }
-
+        [Obsolete]
         public void UpdateMeasurments()
         {
             //TODO: 
@@ -194,7 +195,7 @@ namespace Dissertation.Service.IntegrationService.Classes
                               orderby z.MSid ascending
                               select new Measurment
                               {
-                                  Value = x.Value,
+                                  Value = x.P0025,
                                   SensisID = z.MSid,
                                   Time = z.MTime,
                                   TimeC = z.CTime,
