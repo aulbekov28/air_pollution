@@ -10,13 +10,17 @@ namespace Dissertation.Service.IntegrationService.Services
 {
     internal class MeasurementUpdater : BaseUpdater, IUpdater<Measurment>
     {
+        private readonly int numOfRows;
+
         public MeasurementUpdater(DB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
         {
+            numOfRows = 5_000;
         }
 
         public void Execute()
         {
-            throw new NotImplementedException();
+            GetMeasurements();
+            _analysisContext.SaveChanges();
         }
 
         public IEnumerable<Measurment> GetData()
@@ -25,11 +29,9 @@ namespace Dissertation.Service.IntegrationService.Services
         }
 
         //TODO REWRITE THAT STUFF
-        public void WriteData()
+        public void GetMeasurements()
         {
-            int NumOfRows = 5_000;
-
-
+ 
             #region CL2 Entities / 37
             var max = _analysisContext.Measurment.Where(x => x.SubstanceID == 37).DefaultIfEmpty().Max(r => r == null ? 0 : r.SensisID);
             var CL2Entities = (from x in _monitoringContext.V_SENSIS_CL2
@@ -43,7 +45,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                    TimeC = z.CTime,
                                    PostID = z.CPid,
                                    SubstanceID = 37
-                               }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                               }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(CL2Entities);
             #endregion
 
@@ -61,7 +63,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                   TimeC = z.CTime,
                                   PostID = z.CPid,
                                   SubstanceID = 25
-                              }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                              }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(COEntities);
             #endregion
 
@@ -79,7 +81,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                     TimeC = z.CTime,
                                     PostID = z.CPid,
                                     SubstanceID = 39
-                                }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                                }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(CXHYEntities);
             #endregion
 
@@ -97,7 +99,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                    TimeC = z.CTime,
                                    PostID = z.CPid,
                                    SubstanceID = 27
-                               }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                               }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(HCLEntities);
 
 
@@ -117,7 +119,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                     TimeC = z.CTime,
                                     PostID = z.CPid,
                                     SubstanceID = 30
-                                }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                                }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(HCOHEntities);
             #endregion
 
@@ -135,7 +137,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                   TimeC = z.CTime,
                                   PostID = z.CPid,
                                   SubstanceID = 26
-                              }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                              }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(HFEntities);
             #endregion
 
@@ -153,7 +155,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                    TimeC = z.CTime,
                                    PostID = z.CPid,
                                    SubstanceID = 21
-                               }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                               }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(NO2Entities);
             #endregion
 
@@ -171,7 +173,7 @@ namespace Dissertation.Service.IntegrationService.Services
                                    TimeC = z.CTime,
                                    PostID = z.CPid,
                                    SubstanceID = 23
-                               }).OrderBy(v => v.SensisID).Take(NumOfRows);
+                               }).OrderBy(v => v.SensisID).Take(numOfRows);
             WriteData(SO2Entities);
             #endregion
         }

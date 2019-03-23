@@ -17,6 +17,7 @@ namespace Dissertation.Service.IntegrationService.Services
         public void Execute()
         {
             WriteData(GetData());
+            _analysisContext.SaveChanges();
         }
 
         public IEnumerable<Weather> GetData()

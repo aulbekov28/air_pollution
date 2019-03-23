@@ -21,6 +21,7 @@ namespace Dissertation.Service.IntegrationService.Services
                 return;
             }
             WriteData(GetData());
+            _analysisContext.SaveChanges();
         }
 
         public IEnumerable<Post> GetData()

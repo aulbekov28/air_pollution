@@ -61,8 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\INotification.cs" />
-    <Compile Include="Notification.cs" />
+    <Compile Include="Interfaces\INotifier.cs" />
+    <Compile Include="Notifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TelegramService.cs" />
   </ItemGroup>
