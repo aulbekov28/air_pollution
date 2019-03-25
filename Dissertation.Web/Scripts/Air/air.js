@@ -34,21 +34,19 @@
     var POSITION_ID = "#position";
 
     // metadata about each type of overlay
+    //TODO
     var RECIPES = {
-        "temp": {min: -10,   max: 35,    scale: "line", precision: 1, label: "気温 Temperature", unit: "ºC"},
-        "hum":  {min: 0,     max: 100,   scale: "line", precision: 1, label: "湿度 Humidity", unit: "%"},
-        "wv":   {min: 1,     max: 20,    scale: "log",  precision: 1, label: "風速 Wind Velocity", unit: " m/s"},
-        "in":   {min: 0.1,   max: 4.0,   scale: "log",  precision: 2, label: "日射量 Insolation", unit: ' MJ/m<span class="sup">2</span>'},
-        "no":   {min: 0.001, max: 0.600, scale: "log",  precision: 0, label: "一酸化窒素 Nitric Monoxide", unit: " ppb", multiplier: 1000},
-        "no2":  {min: 0.001, max: 0.200, scale: "log",  precision: 0, label: "二酸化窒素 Nitrogen Dioxide", unit: " ppb", multiplier: 1000},
-        "nox":  {min: 0.001, max: 0.600, scale: "log",  precision: 0, label: "窒素酸化物 Nitrogen Oxides", unit: " ppb", multiplier: 1000},
-        "ox":   {min: 0.001, max: 0.250, scale: "log",  precision: 0, label: "光化学オキシダント Photochemical Oxidants", unit: " ppb", multiplier: 1000},
-        "so2":  {min: 0.001, max: 0.110, scale: "log",  precision: 0, label: "二酸化硫黄 Sulfur Dioxide", unit: " ppb", multiplier: 1000},
-        "co":   {min: 0.1,   max: 3.0,   scale: "log",  precision: 1, label: "一酸化炭素 Carbon Monoxide", unit: " ppm"},
-        "ch4":  {min: 1.5,   max: 3.0,   scale: "log",  precision: 2, label: "メタン Methane", unit: " ppm"},
-        "nmhc": {min: 0.01,  max: 1.30,  scale: "log",  precision: 2, label: "非メタン炭化水素 Non-Methane Hydrocarbons", unit: " ppm"},
-        "spm":  {min: 1,     max: 750,   scale: "log",  precision: 0, label: "浮遊粒子状物質 Suspended Particulate Matter", unit: ' μg/m<span class="sup">3</span>'},
-        "pm25": {min: 1,     max: 750,   scale: "log",  precision: 0, label: "微小粒子状物質 2.5µm Particulate Matter", unit: ' μg/m<span class="sup">3</span>'}
+        "temp": {min: -40,   max: 40,    scale: "line", precision: 1, label: "Temperature", unit: "ºC"},
+        "hum":  {min: 0,     max: 100,   scale: "line", precision: 1, label: "Humidity", unit: "%"},
+        "wv":   {min: 0.01,     max: 20,    scale: "log",  precision: 1, label: "Wind Velocity", unit: " m/s"},
+        "hcoh": { min: 0.0001, max: 0.035, scale: "log", precision: 0, label: "HCOH", unit: ' mg/m<span class="sup">3</span>', multiplier: 1000},
+        "no2": { min: 0.001, max: 0.2, scale: "log", precision: 0, label: "NO2", unit: ' mg/m<span class="sup">3</span>', multiplier: 1000},
+        "hcl": { min: 0.001, max: 0.2, scale: "log", precision: 0, label: "HCl", unit: ' mg/m<span class="sup">3</span>', multiplier: 1000},
+        "hf": { min: 0.001, max: 0.021, scale: "log", precision: 0, label: "HF", unit: ' mg/m<span class="sup">3</span>', multiplier: 1000},
+        "so2": { min: 0.01, max: 0.5, scale: "log",  precision: 0, label: "SO", unit: ' mg/m<span class="sup">3</span>', multiplier: 100},
+        "co":   {min: 0.1,   max: 3.0,   scale: "log",  precision: 1, label: "CO", unit: ' mg/m<span class="sup">3</span>'},
+        "cl2": { min: 0.001, max: 0.1, scale: "log", precision: 2, label: "CL2", unit: ' mg/m<span class="sup">3</span>'},
+        "cxhy": { min: 1, max: 100, scale: "log", precision: 2, label: "CxHy", unit: ' mg/m<span class="sup">3</span>'}
     };
 
     /**
@@ -115,13 +113,28 @@
             new Date(parts[3] + "-" + parts[4] + "-" + parts[5] + " " + parts[6] + ":00");
 
         return {
-            topography: "/src/tokyo-topo.json",
-            stations: "/src/station-data.json",
+            topography: "/src/yk-topo - 1.json",
+            stations: "/src/yk-station.json",
             samples: ["/src/sample", path].join("/") + ".json",
             type: type,
             date: date,
             recipe: RECIPES[type]
         };
+    }
+
+    function getPredictedData() {
+        var uri = 'http://mydissertation.web/api/values';
+        //var data = loadJson(uri);
+        d3.json(uri,
+            function(error, response) {
+                return response;
+            });
+        debugger;
+        return undefined;
+        //$.getJSON(uri)
+        //    .done(function (data) {
+        //        return data;
+        //    });
     }
 
     var displayData = parseDisplayData();
@@ -636,7 +649,7 @@
         });
 
         if (points.length < 5) {
-            return d.reject("東京都環境局がデータを調整中");
+            return d.reject("error. data needs to be corrected");
         }
 
         var interpolate = mvi.inverseDistanceWeighting(points, 5);  // Use the five closest neighbors
@@ -695,8 +708,8 @@
                         return;
                     }
                 }
-                var date = data.date.replace(":00+09:00", "");
-                displayStatus(date + " JST");
+                var date = data.date.replace(":00+06:00", "");
+                displayStatus(date + " UKK");
                 d.resolve(createField(columns));
                 log.timeEnd("interpolating field");
             }
@@ -831,7 +844,7 @@
         });
 
         if (points.length < 3) {  // we need at least three samples to interpolate
-            return d.reject("東京都環境局がデータを調整中");
+            return d.reject("More data is needed");
         }
 
         var min = recipe.min;
@@ -938,6 +951,15 @@
     }
 
     function prepareData(data) {
+        try
+        {
+            data = getPredictedData();
+        }
+        catch (e)
+        {
+            log.error(e);
+        }
+
         return data || {date: undefined, samples: []};
     }
 

@@ -12,7 +12,7 @@ namespace Dissertation.Service.IntegrationService.Services
     {
         private readonly int numOfRows;
 
-        public MeasurementUpdater(DB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
+        public MeasurementUpdater(IDB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
         {
             numOfRows = 5_000;
         }

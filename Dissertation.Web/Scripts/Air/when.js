@@ -37,7 +37,7 @@ return define(function () {
 	/**
 	 * Register an observer for a promise or immediate value.
 	 *
-	 * @param {*} promiseOrValue
+	 * @param {*} promiseOrValue WTF
 	 * @param {function?} [onFulfilled] callback to be called when promiseOrValue is
 	 *   successfully fulfilled.  If promiseOrValue is an immediate value, callback
 	 *   will be invoked immediately.
@@ -61,6 +61,8 @@ return define(function () {
 	 * untrusted.
 	 * @constructor
 	 * @name Promise
+	 * @param {function?} then WTF
+	 * @param {function?} inspect WTF
 	 */
 	function Promise(then, inspect) {
 		this.then = then;
@@ -71,7 +73,7 @@ return define(function () {
 		/**
 		 * Register a rejection handler.  Shortcut for .then(undefined, onRejected)
 		 * @param {function?} onRejected
-		 * @return {Promise}
+		 * @return {Promise} WTF
 		 */
 		otherwise: function(onRejected) {
 			return this.then(undef, onRejected);
@@ -85,7 +87,7 @@ return define(function () {
 		 * an additional error.
 		 * @param {function} onFulfilledOrRejected handler to be called regardless of
 		 *  fulfillment or rejection
-		 * @returns {Promise}
+		 * @returns {Promise} WTF
 		 */
 		ensure: function(onFulfilledOrRejected) {
 			return this.then(injectHandler, injectHandler)['yield'](this);
@@ -114,7 +116,7 @@ return define(function () {
 		 * for the onFulfilled to be called with the array as its argument list
 		 * i.e. onFulfilled.apply(undefined, array).
 		 * @param {function} onFulfilled function to receive spread arguments
-		 * @return {Promise}
+		 * @return {Promise} TWF
 		 */
 		spread: function(onFulfilled) {
 			return this.then(function(array) {
@@ -128,6 +130,7 @@ return define(function () {
 		/**
 		 * Shortcut for .then(onFulfilledOrRejected, onFulfilledOrRejected)
 		 * @deprecated
+		 * @return wtf
 		 */
 		always: function(onFulfilledOrRejected, onProgress) {
 			return this.then(onFulfilledOrRejected, onFulfilledOrRejected, onProgress);

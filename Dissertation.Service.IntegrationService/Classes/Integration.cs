@@ -19,6 +19,7 @@ namespace Dissertation.Service.IntegrationService.Classes
         public void StartCycle()
         {
             _log.Trace("Start cycle");
+            //TODO separate class(?)
             INotifier _notifier = Factory.GetNotifier();
             _notifier.Notify("Service started");
             Active = true;

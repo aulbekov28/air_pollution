@@ -227,7 +227,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Air\air.js" />
-    <Content Include="Scripts\Air\air_v1.js" />
     <Content Include="Scripts\Air\d3.v3.js" />
     <Content Include="Scripts\Air\mvi.js" />
     <Content Include="Scripts\Air\topojson.v1.js" />
@@ -289,9 +288,12 @@
     <Content Include="Views\Visualization\AirMap.cshtml" />
     <Content Include="src\sample\13.json" />
     <Content Include="src\tokyo-topo.json" />
+    <Content Include="src\sample\current1.json" />
+    <Content Include="src\tokyo-station.json" />
+    <Content Include="src\yk-station.json" />
     <Content Include="src\sample\current.json" />
-    <Content Include="src\station-data.json" />
     <Content Include="src\yk-topo.json" />
+    <Content Include="src\yk-topo - 1.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

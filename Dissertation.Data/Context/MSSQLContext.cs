@@ -27,6 +27,10 @@ namespace Dissertation.Data.Context
             base.OnModelCreating(modelBuilder);
         }
 
+        IDbSet<TEntity> IDbContext.Set<TEntity>()
+        {
+            throw new NotImplementedException();
+        }
 
         public virtual DbSet<Weather> Weather { get; set; }
         public virtual DbSet<Measurment> Measurment { get; set; }

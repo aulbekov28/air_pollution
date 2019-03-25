@@ -13,7 +13,7 @@ namespace Dissertation.Data.Context
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_SAPEntities : DbContext
+    public partial class DB_SAPEntities : DbContext, IDB_SAPEntities
     {
         public DB_SAPEntities()
             : base("name=DB_SAPEntities")
@@ -24,7 +24,12 @@ namespace Dissertation.Data.Context
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
+        IDbSet<TEntity> IDbContext.Set<TEntity>()
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual DbSet<ADDD> ADDD { get; set; }
         public virtual DbSet<ALG> ALG { get; set; }
         public virtual DbSet<BD> BD { get; set; }

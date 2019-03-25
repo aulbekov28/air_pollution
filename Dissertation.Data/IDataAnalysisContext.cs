@@ -9,19 +9,13 @@ using Dissertation.Data.Context;
 
 namespace Dissertation.Data
 {
-    public interface IDataAnalysisContext : IDisposable
+    public interface IDataAnalysisContext : IDbContext
     {
-        DbSet<TEntity> Set<TEntity>() where TEntity : class;
-        DbSet Set(Type entityType);
-        int SaveChanges();
-        Task<int> SaveChangesAsync();
-        DbChangeTracker ChangeTracker { get; }
-        Database Database { get; }
-
         DbSet<Weather> Weather { get; set; }
         DbSet<Measurment> Measurment { get; set; }
         DbSet<Post> Post { get; set; }
         DbSet<Substance> Substance { get; set; }
         DbSet<Prediction> Predictions { get; set; }
+        
     }
 }

@@ -8,9 +8,9 @@ using Dissertation.Data.Context;
 
 namespace Dissertation.Service.IntegrationService.Services
 {
-    class WeatherUpdater : BaseUpdater, IUpdater<Weather>
+    public class WeatherUpdater : BaseUpdater, IUpdater<Weather>
     {
-        public WeatherUpdater(DB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
+        public WeatherUpdater(IDB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
         {
         }
 

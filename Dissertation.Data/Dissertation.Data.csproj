@@ -255,6 +255,7 @@
     <Compile Include="Context\GROUP_CP.cs">
       <DependentUpon>DataMonitoring.tt</DependentUpon>
     </Compile>
+    <Compile Include="IDB_SAPEntities.cs" />
     <Compile Include="Context\IT.cs">
       <DependentUpon>DataMonitoring.tt</DependentUpon>
     </Compile>
@@ -410,6 +411,7 @@
     <Compile Include="DataModel\Substance.cs" />
     <Compile Include="DataModel\Weather.cs" />
     <Compile Include="IDataAnalysisContext.cs" />
+    <Compile Include="IDbContext.cs" />
     <Compile Include="Migrations\201809221217436_AddMeasurmentLinks.cs" />
     <Compile Include="Migrations\201809221217436_AddMeasurmentLinks.Designer.cs">
       <DependentUpon>201809221217436_AddMeasurmentLinks.cs</DependentUpon>

@@ -9,21 +9,22 @@ using Dissertation.Data.Context;
 
 namespace Dissertation.Service.IntegrationService.Services
 {
-    internal abstract class BaseUpdater
+    public abstract class BaseUpdater 
     {
         protected IDataAnalysisContext _analysisContext;
-        protected DB_SAPEntities _monitoringContext;
+        protected IDB_SAPEntities _monitoringContext;
         protected ILog _log = LogManager.GetLogger(typeof(BaseUpdater));
 
-        public BaseUpdater(DB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext)
+        public BaseUpdater(IDB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext)
         {
             this._analysisContext = _analysisContext;
             this._monitoringContext = _monitoringContext;
         }
 
-        protected override void Dispose()
+        public void Dispose()
         {
-
+            _analysisContext.Dispose();
+            _monitoringContext.Dispose();
         }
     }
 }

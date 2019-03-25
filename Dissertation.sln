@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dissertation.Web", "Dissert
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dissertation.Notification", "Dissertation.Notification\Dissertation.Notification.csproj", "{DF1C2E2B-EC3F-4B44-B12B-2A27DF0EEEEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnitTest", "..\Dissertation.Service.xUnitTest\xUnitTest\xUnitTest.csproj", "{1DF019DB-639E-4DF2-9182-87C889529E20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DF1C2E2B-EC3F-4B44-B12B-2A27DF0EEEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF1C2E2B-EC3F-4B44-B12B-2A27DF0EEEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF1C2E2B-EC3F-4B44-B12B-2A27DF0EEEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DF019DB-639E-4DF2-9182-87C889529E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF019DB-639E-4DF2-9182-87C889529E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF019DB-639E-4DF2-9182-87C889529E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF019DB-639E-4DF2-9182-87C889529E20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

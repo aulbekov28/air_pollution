@@ -10,7 +10,7 @@ namespace Dissertation.Service.IntegrationService.Services
 {
     class PostUpdater : BaseUpdater, IUpdater<Post>
     {
-        public PostUpdater(DB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
+        public PostUpdater(IDB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
         {
         }
 

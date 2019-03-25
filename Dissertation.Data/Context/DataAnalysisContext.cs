@@ -25,6 +25,11 @@
             base.OnModelCreating(modelBuilder);
         }
 
+        IDbSet<TEntity> IDbContext.Set<TEntity>()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public DbSet<Weather> Weather { get; set; }
         public DbSet<Measurment> Measurment { get; set; }
         public DbSet<Post> Post { get; set; }

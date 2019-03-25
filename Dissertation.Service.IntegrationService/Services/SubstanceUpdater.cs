@@ -10,7 +10,7 @@ namespace Dissertation.Service.IntegrationService.Services
 {
     class SubstanceUpdater : BaseUpdater, IUpdater<Substance>
     {
-        public SubstanceUpdater(DB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
+        public SubstanceUpdater(IDB_SAPEntities _monitoringContext, IDataAnalysisContext _analysisContext) : base(_monitoringContext, _analysisContext)
         {
         }
 
