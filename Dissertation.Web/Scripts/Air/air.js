@@ -708,7 +708,7 @@
                         return;
                     }
                 }
-                var date = data.date.replace(":00+06:00", "");
+                var date = data.date.replace(":00+09:00", "");
                 displayStatus(date + " UKK");
                 d.resolve(createField(columns));
                 log.timeEnd("interpolating field");
@@ -953,7 +953,7 @@
     function prepareData(data) {
         try
         {
-            data = getPredictedData();
+            //data = getPredictedData();
         }
         catch (e)
         {

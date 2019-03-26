@@ -22,10 +22,11 @@ namespace Dissertation.Service.IntegrationService.Services
 
         public IEnumerable<Weather> GetData()
         {
-            var lastid = _analysisContext.Weather.DefaultIfEmpty().Max(x => x == null ? 0 : x.ID);
+            var lastId = _analysisContext.Weather.DefaultIfEmpty().Max(x => x == null ? 0 : x.ID);
+
             var weather = (from ms in _monitoringContext.V_MS
                 join wx in _monitoringContext.V_WXT on ms.MSid equals wx.MSid
-                where ms.MSid > lastid
+                where ms.MSid > lastId
                 select new Weather
                 {
                     ID = ms.MSid,
@@ -38,7 +39,7 @@ namespace Dissertation.Service.IntegrationService.Services
                     pressure = wx.P0205,
                     precipitation = wx.P0175,
                     precipitation_intensity = wx.P0176
-                }).OrderBy(x => x.ID).Take(5000);
+                }).OrderBy(x => x.ID).Take(5000).ToList();
             return weather;
         }
 
