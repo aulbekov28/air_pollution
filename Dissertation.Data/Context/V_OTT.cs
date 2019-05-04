@@ -24,6 +24,7 @@ namespace Dissertation.Data.Context
         public Nullable<int> P1200 { get; set; }
         public Nullable<int> P1199 { get; set; }
         public Nullable<int> P1198 { get; set; }
+        public Nullable<int> On { get; set; }
     
         public virtual V_MS V_MS { get; set; }
     }

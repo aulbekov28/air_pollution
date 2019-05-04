@@ -180,7 +180,7 @@ namespace Dissertation.Service.IntegrationService.Services
 
         public void WriteData(IEnumerable<Measurment> obtainedData)
         {
-            if (obtainedData != null && obtainedData.Count() > 0)
+            if (obtainedData != null && obtainedData.Any())
             {
                 _log.Trace($"Added measurments ({obtainedData.First().SubstanceID}) entities - {obtainedData.Count()}");
                 _analysisContext.Measurment.AddRange(obtainedData);

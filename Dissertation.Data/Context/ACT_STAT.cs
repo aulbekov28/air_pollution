@@ -12,21 +12,10 @@ namespace Dissertation.Data.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class V_GT
+    public partial class ACT_STAT
     {
-        public int V_GTid { get; set; }
-        public Nullable<int> MSid { get; set; }
-        public Nullable<double> P0111 { get; set; }
-        public Nullable<int> P1111 { get; set; }
-        public Nullable<double> P0212 { get; set; }
-        public Nullable<int> P1212 { get; set; }
-        public Nullable<int> P0400 { get; set; }
-        public Nullable<int> P0401 { get; set; }
-        public Nullable<int> P0402 { get; set; }
-        public Nullable<int> P0408 { get; set; }
-        public Nullable<double> P0409 { get; set; }
-        public Nullable<int> On { get; set; }
-    
-        public virtual V_MS V_MS { get; set; }
+        public int Number { get; set; }
+        public int ACTIONid { get; set; }
+        public int STATUSid { get; set; }
     }
 }

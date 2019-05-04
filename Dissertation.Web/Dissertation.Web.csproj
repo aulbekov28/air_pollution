@@ -286,14 +286,14 @@
     <Content Include="Views\Predition\List.cshtml" />
     <Content Include="Views\Visualization\Index.cshtml" />
     <Content Include="Views\Visualization\AirMap.cshtml" />
-    <Content Include="src\sample\13.json" />
     <Content Include="src\tokyo-topo.json" />
     <Content Include="src\sample\current1.json" />
     <Content Include="src\tokyo-station.json" />
     <Content Include="src\yk-station.json" />
     <Content Include="src\sample\current.json" />
     <Content Include="src\yk-topo.json" />
-    <Content Include="src\yk-topo - 1.json" />
+    <Content Include="src\yk-topo-alt.json" />
+    <Content Include="src\sample\current-yk.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -349,6 +349,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties src_4yk-topo-alt_1json__JSONSchema="http://json.schemastore.org/bozr" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

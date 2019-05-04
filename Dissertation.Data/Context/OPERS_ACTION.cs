@@ -12,21 +12,19 @@ namespace Dissertation.Data.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class V_GT
+    public partial class OPERS_ACTION
     {
-        public int V_GTid { get; set; }
-        public Nullable<int> MSid { get; set; }
-        public Nullable<double> P0111 { get; set; }
-        public Nullable<int> P1111 { get; set; }
-        public Nullable<double> P0212 { get; set; }
-        public Nullable<int> P1212 { get; set; }
-        public Nullable<int> P0400 { get; set; }
-        public Nullable<int> P0401 { get; set; }
-        public Nullable<int> P0402 { get; set; }
-        public Nullable<int> P0408 { get; set; }
-        public Nullable<double> P0409 { get; set; }
-        public Nullable<int> On { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public OPERS_ACTION()
+        {
+            this.V_OPERS = new HashSet<V_OPERS>();
+        }
     
-        public virtual V_MS V_MS { get; set; }
+        public int ACTIONid { get; set; }
+        public string Name { get; set; }
+        public int OnWriteDB { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<V_OPERS> V_OPERS { get; set; }
     }
 }

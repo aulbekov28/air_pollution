@@ -9,35 +9,35 @@ namespace Dissertation.Service.IntegrationService.Services
 {
     public class Executor
     {
-        private readonly IUpdater<Weather> weatherUpdater;
-        private readonly IUpdater<Measurment> measureUpdater;
-        private readonly IUpdater<Post> postUpdater;
-        private readonly IUpdater<Substance> subUpdater;
+        private readonly IUpdater<Weather> _weatherUpdater;
+        private readonly IUpdater<Measurment> _measureUpdater;
+        private readonly IUpdater<Post> _postUpdater;
+        private readonly IUpdater<Substance> _subUpdater;
 
         public delegate void UpdaterExecuted();
         public event UpdaterExecuted WorkExecuted;
 
         public Executor()
         {
-            postUpdater = Factory.GetPostUpdater();
-            subUpdater = Factory.GetSubtanceUpdater();
-            measureUpdater = Factory.GetMeasurmentUpdater();
-            weatherUpdater = Factory.GetWeatherUpdater();
+            _postUpdater = Factory.GetPostUpdater();
+            _subUpdater = Factory.GetSubtanceUpdater();
+            _measureUpdater = Factory.GetMeasurmentUpdater();
+            _weatherUpdater = Factory.GetWeatherUpdater();
         }
 
         public void Start()
         {
-            postUpdater.Execute();
-            subUpdater.Execute();
-            measureUpdater.Execute();
-            weatherUpdater.Execute();
+            _postUpdater.Execute();
+            _subUpdater.Execute();
+            _measureUpdater.Execute();
+            _weatherUpdater.Execute();
             RiseEvent();
         }
 
 
         private void RiseEvent()
         {
-            WorkExecuted.Invoke();
+            WorkExecuted?.Invoke();
         }
 
     }

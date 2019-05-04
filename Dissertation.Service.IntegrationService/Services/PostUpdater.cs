@@ -18,6 +18,7 @@ namespace Dissertation.Service.IntegrationService.Services
         {
             if (_analysisContext.Post.FirstOrDefault() != null)
             {
+                Console.WriteLine("Daijobu");
                 return;
             }
             WriteData(GetData());
@@ -44,11 +45,9 @@ namespace Dissertation.Service.IntegrationService.Services
         {
             foreach (var a in posts)
             {
-                if (!_analysisContext.Post.Exists(a.ID))
-                {
-                    _log.Trace($"Added new post {a.Name}");
-                    _analysisContext.Post.Add(a);
-                }
+                if (_analysisContext.Post.Exists(a.ID)) continue;
+                _log.Trace($"Added new post {a.Name}");
+                _analysisContext.Post.Add(a);
             }
         }
     }

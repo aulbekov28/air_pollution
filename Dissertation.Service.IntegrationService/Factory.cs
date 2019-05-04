@@ -14,20 +14,22 @@ using Dissertation.Service.IntegrationService.Services;
 
 namespace Dissertation.Service.IntegrationService
 {
+    //TODO: not a right method, btw, but what to do 
     public static class Factory
     {
         public static IDataAnalysisContext GetDataAnalysisContext=> new DataAnalysisContext();
 
-        public static DB_SAPEntities GetDataMonitoringContext => new DB_SAPEntities();
+        public static CEBEntities GetDataMonitoringContext => new CEBEntities();
 
         public static ILog GetLogger()
         {
-            return GetLogger();
+            return new ConsoleLog();
         }
 
         public static ILog GetLogger(Type type)
         {
-            return LogManager.GetLogger(type);
+            return new ConsoleLog();
+            //return LogManager.GetLogger(type);
         }
 
         public static IUpdater<Weather> GetWeatherUpdater()

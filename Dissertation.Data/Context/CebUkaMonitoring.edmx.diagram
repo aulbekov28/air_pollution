@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="02a4c50d7f194aa4941b87a0dda2b006" Name="Diagram1">
+        <EntityTypeShape EntityType="CEBModel.ACT_STAT" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.ADDD" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.ALG" Width="1.5" PointX="5.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.BD" Width="1.5" PointX="7.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.BOUNDS" Width="1.5" PointX="15.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_MS" Width="1.5" PointX="0.75" PointY="67.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CL2_D" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CL2_DD" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CL2_M" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CL2_MM" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CL2_Y" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CL2_YY" Width="1.5" PointX="3" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CO_D" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CO_DD" Width="1.5" PointX="3" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CO_M" Width="1.5" PointX="3" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CO_MM" Width="1.5" PointX="3" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CO_Y" Width="1.5" PointX="3" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CO_YY" Width="1.5" PointX="3" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CXHY_D" Width="1.5" PointX="3" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CXHY_DD" Width="1.5" PointX="3" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CXHY_M" Width="1.5" PointX="3" PointY="46.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CXHY_MM" Width="1.5" PointX="3" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CXHY_Y" Width="1.5" PointX="3" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_CXHY_YY" Width="1.5" PointX="3" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCL_D" Width="1.5" PointX="3" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCL_DD" Width="1.5" PointX="3" PointY="59.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCL_M" Width="1.5" PointX="3" PointY="62.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCL_MM" Width="1.5" PointX="3" PointY="65.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCL_Y" Width="1.5" PointX="3" PointY="68.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCL_YY" Width="1.5" PointX="3" PointY="70.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCOH_D" Width="1.5" PointX="3" PointY="73.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCOH_DD" Width="1.5" PointX="3" PointY="76.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCOH_M" Width="1.5" PointX="3" PointY="79" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCOH_MM" Width="1.5" PointX="3" PointY="81.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCOH_Y" Width="1.5" PointX="3" PointY="84.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HCOH_YY" Width="1.5" PointX="3" PointY="87.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HF_D" Width="1.5" PointX="3" PointY="89.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HF_DD" Width="1.5" PointX="3" PointY="92.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HF_M" Width="1.5" PointX="3" PointY="95.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HF_MM" Width="1.5" PointX="3" PointY="98.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HF_Y" Width="1.5" PointX="3" PointY="100.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_HF_YY" Width="1.5" PointX="3" PointY="103.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_NO2_D" Width="1.5" PointX="3" PointY="106.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_NO2_DD" Width="1.5" PointX="3" PointY="109" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_NO2_M" Width="1.5" PointX="3" PointY="111.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_NO2_MM" Width="1.5" PointX="3" PointY="114.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_NO2_Y" Width="1.5" PointX="3" PointY="117.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_NO2_YY" Width="1.5" PointX="3" PointY="120" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_SO2_D" Width="1.5" PointX="3" PointY="122.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_SO2_DD" Width="1.5" PointX="3" PointY="125.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_SO2_M" Width="1.5" PointX="3" PointY="128.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_SO2_MM" Width="1.5" PointX="3" PointY="130.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_SO2_Y" Width="1.5" PointX="3" PointY="133.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.C_SENSIS_SO2_YY" Width="1.5" PointX="3" PointY="136.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.COND" Width="1.5" PointX="17.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.CP" Width="1.5" PointX="10.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.CRIT" Width="1.5" PointX="17.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.DC" Width="1.5" PointX="11" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.DEV" Width="1.5" PointX="13" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.DIM" Width="1.5" PointX="6.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.FORMAT" Width="1.5" PointX="17.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.FPS" Width="1.5" PointX="17.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.GROUP_CP" Width="1.5" PointX="15.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.IT" Width="1.5" PointX="10.75" PointY="108.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.MI" Width="1.5" PointX="13" PointY="109.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.MSG" Width="1.5" PointX="10.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.NC" Width="1.5" PointX="12.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.OPERS" Width="1.5" PointX="10.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.OPERS_ACTION" Width="1.5" PointX="10.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.OPERS_STATUS" Width="1.5" PointX="14.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.OTT_SET" Width="1.5" PointX="13" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.PAR" Width="1.5" PointX="8.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.REGIM" Width="1.5" PointX="19.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.RepDev" Width="1.5" PointX="15.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.sysdiagrams" Width="1.5" PointX="19.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TBalance" Width="1.5" PointX="19.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TBalanceAlg" Width="1.5" PointX="19.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TBalanceSheet" Width="1.5" PointX="16.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TimeZone" Width="1.5" PointX="18.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TLevelSql" Width="1.5" PointX="20.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TM" Width="1.5" PointX="4.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TRepColumns" Width="1.5" PointX="18" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TRepList" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TUserPassword" Width="1.5" PointX="20.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TYPE" Width="1.5" PointX="20.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.TypeDevice" Width="1.5" PointX="8.5" PointY="109.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_ALARM" Width="1.5" PointX="11" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_EPC" Width="1.5" PointX="8" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_GPS" Width="1.5" PointX="8" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_GT" Width="1.5" PointX="8" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_MGT" Width="1.5" PointX="8" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_MS" Width="1.5" PointX="5.75" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_OTT" Width="1.5" PointX="8" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY" Width="1.5" PointX="8" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY_CL2" Width="1.5" PointX="8" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY_CO" Width="1.5" PointX="8" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY_HCL" Width="1.5" PointX="8" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY_HF" Width="1.5" PointX="8" PointY="41.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY_NH3" Width="1.5" PointX="8" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY_NO2" Width="1.5" PointX="8" PointY="46.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_POLY_SO2" Width="1.5" PointX="8" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_REGARD" Width="1.5" PointX="8" PointY="52.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_REGARD_CL2" Width="1.5" PointX="8" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS" Width="1.5" PointX="8" PointY="57.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_CL2" Width="1.5" PointX="8" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_CO" Width="1.5" PointX="8" PointY="64.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_CXHY" Width="1.5" PointX="8" PointY="67.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_HCL" Width="1.5" PointX="8" PointY="70.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_HCOH" Width="1.5" PointX="8" PointY="73.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_HF" Width="1.5" PointX="8" PointY="77" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_NH3" Width="1.5" PointX="8" PointY="80.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_NO" Width="1.5" PointX="8" PointY="83.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_NO2" Width="1.5" PointX="8" PointY="86.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SENSIS_SO2" Width="1.5" PointX="8" PointY="89.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_SSD" Width="1.5" PointX="8" PointY="92.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_STAT" Width="1.5" PointX="8" PointY="95.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_UTP" Width="1.5" PointX="8" PointY="98.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_WXT" Width="1.5" PointX="8" PointY="101.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.WS" Width="1.5" PointX="11" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CEBModel.V_OPERS" Width="1.5" PointX="13" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CL2_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CL2_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CL2_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CL2_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CL2_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CL2_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CO_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CO_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CO_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CO_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CO_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CO_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CXHY_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CXHY_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CXHY_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CXHY_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CXHY_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_CXHY_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCL_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCL_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCL_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCL_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCL_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCL_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCOH_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCOH_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCOH_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCOH_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCOH_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HCOH_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HF_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HF_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HF_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HF_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HF_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_HF_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_NO2_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_NO2_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_NO2_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_NO2_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_NO2_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_NO2_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_SO2_D_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_SO2_DD_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_SO2_M_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_SO2_MM_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_SO2_Y_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_C_SENSIS_SO2_YY_C_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.CP_DEV" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.CP_OTT_SET" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_GROUP_CP_ChildCPid" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.DC_PAR" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_GROUP_CP_ParentCPid" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.IT_DEV" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.RepDev_DEV" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.DIM_PAR" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.DIM_TM" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_GROUP_CP_RepDev_IDRD" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_IT_TypeDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.IT_MI" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.OPERS_V_OPERS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.OPERS_ACTION_V_OPERS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.PAR_V_ALARM" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.PAR_WS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.RepDev_PAR" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.TRepList_TRepColumns" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.V_MS_V_ALARM" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_EPC_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_GPS_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_GT_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_MGT_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_OTT_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_CL2_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_CO_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_HCL_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_HF_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_NH3_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_NO2_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_SO2_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_POLY_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_REGARD_CL2_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_REGARD_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_CL2_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_CO_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_CXHY_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_HCL_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_HCOH_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_HF_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_NH3_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_NO_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_NO2_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_SO2_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_SENSIS_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_STAT_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_UTP_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.FK_V_WXT_V_MS" ManuallyRouted="false" />
+        <AssociationConnector Association="CEBModel.V_SSD_V_MS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

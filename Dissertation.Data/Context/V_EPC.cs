@@ -17,6 +17,7 @@ namespace Dissertation.Data.Context
         public int V_EPCid { get; set; }
         public Nullable<int> MSid { get; set; }
         public Nullable<int> P0640 { get; set; }
+        public Nullable<int> On { get; set; }
     
         public virtual V_MS V_MS { get; set; }
     }

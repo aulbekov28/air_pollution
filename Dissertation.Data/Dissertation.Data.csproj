@@ -45,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,173 +55,191 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\ACT_STAT.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
     <Compile Include="Context\ADDD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\ALG.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\BD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\BOUNDS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CebUkaMonitoring.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CebUkaMonitoring.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CebUkaMonitoring.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CebUkaMonitoring.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CebUkaMonitoring.edmx</DependentUpon>
     </Compile>
     <Compile Include="Context\COND.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\CP.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\CRIT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_MS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CL2_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CL2_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CL2_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CL2_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CL2_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CL2_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CO_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CO_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CO_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CO_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CO_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CO_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CXHY_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CXHY_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CXHY_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CXHY_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CXHY_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_CXHY_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCL_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCL_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCL_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCL_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCL_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCL_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCOH_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCOH_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCOH_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCOH_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCOH_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HCOH_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HF_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HF_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HF_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HF_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HF_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_HF_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_NO2_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_NO2_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_NO2_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_NO2_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_NO2_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_NO2_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_SO2_D.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_SO2_DD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_SO2_M.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_SO2_MM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_SO2_Y.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\C_SENSIS_SO2_YY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\DataAnalysisContext.cs" />
     <Compile Include="Context\DataMonitoring.Context.cs">
@@ -238,171 +258,195 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Context\DC.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\DEV.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\DIM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\FORMAT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\FPS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\GROUP_CP.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\OPERS_ACTION.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\OPERS_STATUS.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TBalance.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TBalanceAlg.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TBalanceSheet.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TimeZone.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\TUserPassword.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\V_OPERS.cs">
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="IDB_SAPEntities.cs" />
     <Compile Include="Context\IT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\MI.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\MSG.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\MSSQLContext.cs" />
     <Compile Include="Context\NC.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\OPERS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\OTT_SET.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\PAR.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\REGIM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\RepDev.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\sysdiagrams.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\TLevelSql.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\TM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\TRepColumns.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\TRepList.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\TYPE.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\TypeDevice.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_ALARM.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_EPC.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_GPS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_GT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_MGT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_MS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_OTT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY_CL2.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY_CO.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY_HCL.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY_HF.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY_NH3.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY_NO2.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_POLY_SO2.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_REGARD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_REGARD_CL2.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_CL2.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_CO.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_CXHY.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_HCL.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_HCOH.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_HF.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_NH3.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_NO.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_NO2.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SENSIS_SO2.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_SSD.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_STAT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_UTP.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\V_WXT.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\WS.cs">
-      <DependentUpon>DataMonitoring.tt</DependentUpon>
+      <DependentUpon>CebUkaMonitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="DataModel\BaseEntity.cs" />
     <Compile Include="DataModel\Measurment.cs" />
@@ -439,6 +483,16 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Context\CebUkaMonitoring.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CebUkaMonitoring.edmx</DependentUpon>
+      <LastGenOutput>CebUkaMonitoring.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Context\CebUkaMonitoring.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CebUkaMonitoring.edmx</DependentUpon>
+      <LastGenOutput>CebUkaMonitoring.cs</LastGenOutput>
+    </Content>
     <Content Include="Context\DataMonitoring.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataMonitoring.edmx</DependentUpon>
@@ -452,6 +506,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="Context\CebUkaMonitoring.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CebUkaMonitoring.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Context\CebUkaMonitoring.edmx.diagram">
+      <DependentUpon>CebUkaMonitoring.edmx</DependentUpon>
+    </None>
     <None Include="Context\DataMonitoring.edmx.diagram">
       <DependentUpon>DataMonitoring.edmx</DependentUpon>
     </None>

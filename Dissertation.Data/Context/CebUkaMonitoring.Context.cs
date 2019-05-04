@@ -13,11 +13,10 @@ namespace Dissertation.Data.Context
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    [Obsolete]
-    public partial class DB_SAPEntities : DbContext, IDB_SAPEntities
+    public partial class CEBEntities : DbContext, IDB_SAPEntities
     {
-        public DB_SAPEntities()
-            : base("name=DB_SAPEntities")
+        public CEBEntities()
+            : base("name=CEBEntities")
         {
         }
     
@@ -31,6 +30,7 @@ namespace Dissertation.Data.Context
             throw new NotImplementedException();
         }
 
+        public virtual DbSet<ACT_STAT> ACT_STAT { get; set; }
         public virtual DbSet<ADDD> ADDD { get; set; }
         public virtual DbSet<ALG> ALG { get; set; }
         public virtual DbSet<BD> BD { get; set; }
@@ -98,15 +98,22 @@ namespace Dissertation.Data.Context
         public virtual DbSet<MSG> MSG { get; set; }
         public virtual DbSet<NC> NC { get; set; }
         public virtual DbSet<OPERS> OPERS { get; set; }
+        public virtual DbSet<OPERS_ACTION> OPERS_ACTION { get; set; }
+        public virtual DbSet<OPERS_STATUS> OPERS_STATUS { get; set; }
         public virtual DbSet<OTT_SET> OTT_SET { get; set; }
         public virtual DbSet<PAR> PAR { get; set; }
         public virtual DbSet<REGIM> REGIM { get; set; }
         public virtual DbSet<RepDev> RepDev { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<TBalance> TBalance { get; set; }
+        public virtual DbSet<TBalanceAlg> TBalanceAlg { get; set; }
+        public virtual DbSet<TBalanceSheet> TBalanceSheet { get; set; }
+        public virtual DbSet<TimeZone> TimeZone { get; set; }
         public virtual DbSet<TLevelSql> TLevelSql { get; set; }
         public virtual DbSet<TM> TM { get; set; }
         public virtual DbSet<TRepColumns> TRepColumns { get; set; }
         public virtual DbSet<TRepList> TRepList { get; set; }
+        public virtual DbSet<TUserPassword> TUserPassword { get; set; }
         public virtual DbSet<TYPE> TYPE { get; set; }
         public virtual DbSet<TypeDevice> TypeDevice { get; set; }
         public virtual DbSet<V_ALARM> V_ALARM { get; set; }
@@ -142,5 +149,6 @@ namespace Dissertation.Data.Context
         public virtual DbSet<V_UTP> V_UTP { get; set; }
         public virtual DbSet<V_WXT> V_WXT { get; set; }
         public virtual DbSet<WS> WS { get; set; }
+        public virtual DbSet<V_OPERS> V_OPERS { get; set; }
     }
 }

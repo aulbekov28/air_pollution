@@ -113,9 +113,9 @@
             new Date(parts[3] + "-" + parts[4] + "-" + parts[5] + " " + parts[6] + ":00");
 
         return {
-            topography: "/src/yk-topo - 1.json",
+            topography: "/src/yk-topo-alt.json",
             stations: "/src/yk-station.json",
-            samples: ["/src/sample", path].join("/") + ".json",
+            samples: ["/src/sample", path].join("/") + "-yk.json",
             type: type,
             date: date,
             recipe: RECIPES[type]
@@ -355,10 +355,10 @@
     function displayStatus(status, error) {
         if (error) {
             bad = true;  // errors are sticky--let's not overwrite error information if it occurs
-            d3.select(STATUS_ID).node().textContent = "⁂ " + error;
+            d3.select(STATUS_ID).node().textContent = " " + error;
         }
         else if (!bad) {
-            d3.select(STATUS_ID).node().textContent = "⁂ " + status;
+            d3.select(STATUS_ID).node().textContent = " " + status;
         }
     }
 
@@ -515,8 +515,8 @@
      * Returns a human readable string for the provided coordinates.
      */
     function formatCoordinates(lng, lat) {
-        return Math.abs(lat).toFixed(6) + "º " + (lat >= 0 ? "N" : "S") + ", " +
-            Math.abs(lng).toFixed(6) + "º " + (lng >= 0 ? "E" : "W");
+        return Math.abs(lat).toFixed(4) + "° " + (lat >= 0 ? "N" : "S") + ", " +
+            Math.abs(lng).toFixed(4) + "° " + (lng >= 0 ? "E" : "W");
     }
 
     /**
@@ -526,7 +526,8 @@
         var d = Math.atan2(-x, y) / τ * 360;  // calculate into-the-wind cardinal degrees
         var wd = Math.round((d + 360) % 360 / 5) * 5;  // shift [-180, 180] to [0, 360], and round to nearest 5.
         var m = Math.sqrt(x * x + y * y);
-        return wd.toFixed(0) + "º @ " + m.toFixed(1) + " m/s";
+        var result = m.toFixed(1) + " m/s"
+        return result;
     }
 
     /**
@@ -926,8 +927,8 @@
             var c = settings.projection.invert(p);
             var v = field(p[0], p[1]);
             if (v[2] >= INVISIBLE) {
-                d3.select(LOCATION_ID).text("⁂ " + formatCoordinates(c[0], c[1]));
-                var pointDetails = "⁂ " + formatVector(v[0], v[1]);
+                d3.select(LOCATION_ID).text(" " + formatCoordinates(c[0], c[1]));
+                var pointDetails = " " + formatVector(v[0], v[1]);
                 if (overlay) {
                     pointDetails += " | " + formatOverlayValue(overlay(p[0], p[1]));
                 }

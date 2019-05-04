@@ -72,12 +72,6 @@ namespace Dissertation.Web.Controllers
 
         }
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return $"value {id}";
-        }
-
         // POST api/values
         public void Post([FromBody]string data)
         {
@@ -137,16 +131,6 @@ namespace Dissertation.Web.Controllers
 
 
             _log.Trace($"API CALL / Prediction is done");
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
         }
 
         private AirMapModel GetData()

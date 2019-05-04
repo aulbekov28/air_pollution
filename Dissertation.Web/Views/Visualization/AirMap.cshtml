@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="display" 
-     data-topography="/src/yk-topo.json" 
+     data-topography="/src/yk-topo-alt.json" 
      @*data-topography="/src/tokyo-topo.json"*@ 
      data-samples="/src/sample/current.json" data-type="wind" data-date="">
         <div id="map">
@@ -28,7 +28,7 @@
         </div>
         <div id="details">
             <h1 id="type">Oskemen town</h1>
-            <h1 id="type2">Wind Speed</h1>
+            <h1 id="type2">Winds direction</h1>
             <h3 id="sample-label" style="display: none">&nbsp;</h3>
             <h2 id="status">&nbsp;</h2>
             <h2 id="location">&nbsp;</h2>
@@ -36,29 +36,29 @@
         </div>
 
         <div id="about">
-            <h1>About</h1>
-            <span>Control | </span>
+            @*<span>Control | </span>*@
             @*<span class="text-button" id="previous-day">Previous day</span><span> – </span>
             <span class="text-button" id="previous-hour">1 hour ago</span><span> – </span>
             <span class="text-button" id="next-hour">Next hour</span><span> – </span>
             <span class="text-button" id="next-day">Next day</span><span> – </span>*@
-            <span class="text-button" id="current-conditions">Current</span><span> – </span>
+            @*<span class="text-button" id="current-conditions">Current</span><span> – </span>*@
+            @*<br />*@
             @*<span class="text-button" id="show-location">My location</span><p></p>*@
-            <span>Overlay | </span>
+            @*<span>Overlay | </span>*@
             <span class="text-button" id="wind">None</span><span> – </span>
             <span class="text-button" id="temp">Temp</span><span> – </span>
             <span class="text-button" id="hum">Hum</span><span> – </span>
-            <span class="text-button" id="wv">WV</span><span> – </span>*
+            <span class="text-button" id="wv">WV</span> <br/>
             <span class="text-button" id="hcoh">HCOH</span><span> – </span>
             <span class="text-button" id="hcl">HCl</span><span> – </span>
             <span class="text-button" id="no2">NO<span class="sub">2</span></span><span> – </span>
-            <span class="text-button" id="hf">HF</span><p></p>
-            <span style="visibility: hidden">Overlay | </span>
+            <span class="text-button" id="hf">HF</span><br />
+            @*<span style="visibility: hidden">Overlay | </span>*@
             <span class="text-button" id="cl2">CL<span class="sub">2</span></span><span> – </span>
             <span class="text-button" id="so2">SO<span class="sub">2</span></span><span> – </span>
             <span class="text-button" id="co">CO</span><span> – </span>
-            <span class="text-button" id="cxhy">CxHy</span><span> – </span>
-       </div>
+            <span class="text-button" id="cxhy">CxHy</span>
+        </div>
     </div>
     <script src="/Scripts/Air/when.js" charset="utf-8"></script>
     <script src="/Scripts/Air/d3.v3.js" charset="utf-8"></script>

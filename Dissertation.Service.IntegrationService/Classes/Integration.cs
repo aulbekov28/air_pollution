@@ -6,22 +6,23 @@ using Dissertation.Notification.Services;
 
 namespace Dissertation.Service.IntegrationService.Classes
 {
-    class Integration : IIntegration
+    internal class Integration : IIntegration
     {
         private bool Active = false;
 
         private System.Timers.Timer timer;
 
-        private Object mainLock = new Object();
+        private readonly Object mainLock = new Object();
 
-        private ILog _log = Factory.GetLogger();
+        private readonly ILog _log = Factory.GetLogger(typeof(Integration));
 
         public void StartCycle()
         {
             _log.Trace("Start cycle");
+
             //TODO separate class(?)
-            INotifier _notifier = Factory.GetNotifier();
-            _notifier.Notify("Service started");
+            var notifier = Factory.GetNotifier();
+            notifier.Notify("Service started");
             Active = true;
 
 #if DEBUG
@@ -33,7 +34,7 @@ namespace Dissertation.Service.IntegrationService.Classes
                 Interval = Config.Interval,
             };
 
-            timer.Elapsed += new System.Timers.ElapsedEventHandler(MainCycle);
+            timer.Elapsed += MainCycle;
             timer.Enabled = true;
         }
 
@@ -49,17 +50,16 @@ namespace Dissertation.Service.IntegrationService.Classes
         {
             lock(mainLock)
             {
-                if (Active)
-                {
-                    _log.Trace("MainCycle run");
+                if (!Active) return;
 
-                    Services.Executor executor = new Services.Executor();
-                    executor.WorkExecuted += AfterWorker;
-                    executor.Start();
-                    
-                    var predcitor = Factory.GetPredictor();
-                    predcitor.Make();
-                }
+                _log.Trace("MainCycle run");
+
+                var executor = new Services.Executor();
+                executor.WorkExecuted += AfterWorker;
+                executor.Start();
+
+                var predictor = Factory.GetPredictor();
+                predictor.Make();
             }
         }
 
@@ -68,8 +68,9 @@ namespace Dissertation.Service.IntegrationService.Classes
         {
             try
             {
-                var _analysis = Factory.GetDataAnalysisContext;
-                _analysis.Database.ExecuteSqlCommand("call map_measurment_weather()");
+                var analysis = Factory.GetDataAnalysisContext;
+                analysis.Database.CommandTimeout = 300;
+                analysis.Database.ExecuteSqlCommand(SqlCommands.MeasuementWeatherMapProcedure);
             }
             catch (Exception exception)
             {

@@ -14,10 +14,19 @@ namespace Dissertation.Data.Context
     
     public partial class OPERS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public OPERS()
+        {
+            this.V_OPERS = new HashSet<V_OPERS>();
+        }
+    
         public int USERid { get; set; }
         public string Name { get; set; }
         public string Passwd { get; set; }
-        public Nullable<int> Status { get; set; }
+        public Nullable<int> STATUSid { get; set; }
         public Nullable<int> ON { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<V_OPERS> V_OPERS { get; set; }
     }
 }

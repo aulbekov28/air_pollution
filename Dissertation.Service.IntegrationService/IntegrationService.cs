@@ -1,17 +1,16 @@
 ﻿using System.ServiceProcess;
 using Common.Logging;
-using Dissertation.Service.IntegrationService.Classes;
 
 namespace Dissertation.Service.IntegrationService
 {
     public partial class IntegrationService : ServiceBase
     {
         private IIntegration _service;
-        private ILog _log = Factory.GetLogger();
+        private ILog _log = Factory.GetLogger(typeof(IntegrationService));
 
         public IntegrationService()
         {
-            _service = Factory.GetIntegrationService();
+            _service = Factory.GetIntegrationService(); // TODO: IoC container?
             InitializeComponent();
         }
 
@@ -31,5 +30,7 @@ namespace Dissertation.Service.IntegrationService
             _log.Trace("IntegrationService onStop");
             _service.StopCycle();
         }
+
+
     }
 }

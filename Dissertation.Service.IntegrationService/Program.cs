@@ -1,11 +1,8 @@
-﻿using Common.Logging;
-using Dissertation.Service.IntegrationService.Classes;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
+using Dissertation.Data.Context;
+using NLog;
 
 namespace Dissertation.Service.IntegrationService
 {
@@ -16,6 +13,13 @@ namespace Dissertation.Service.IntegrationService
         /// </summary>
         static void Main()
         {
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomainUnhandledException;
+            if (Environment.UserInteractive)
+            {
+               
+            }
+
+
 #if DEBUG
             IntegrationService service = new IntegrationService();
             service.OnDebug();
@@ -30,5 +34,14 @@ namespace Dissertation.Service.IntegrationService
 #endif
 
         }
+
+        private static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            //TODO Logger.Error(((Exception)e.ExceptionObject).Message + ((Exception)e.ExceptionObject).InnerException.Message);
+        }
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
     }
 }

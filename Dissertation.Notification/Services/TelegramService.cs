@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 //using TeleSharp.TL;
 //using TLSharp;
 //using TLSharp.Core;
@@ -12,7 +13,8 @@ namespace Dissertation.Notification.Services
 
         public TelegramService()
         {
-            _client = new TelegramBotClient("api-key");
+            var apiKey = ConfigurationManager.AppSettings["telegramApiKey"];
+            _client = new TelegramBotClient(apiKey);
         }
 
         public void Notify(string subject, string message)
